@@ -1,0 +1,193 @@
+/* style.css */
+
+/* Reset básico para garantir que todos os navegadores renderizem o layout de forma consistente */
+body, html {
+    margin-top: 10px;
+    padding: 0;
+    font-family: calibri;
+    background-color: #f0f0f0; /* Manter o fundo da página */
+}
+
+#fundo {
+    width: 90%;
+    margin: 0 auto; /* Centraliza o container */
+    padding: 20px;
+    background-color: #f0d7dd; /* Manter o fundo do container */
+    border-radius: 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.301); /* Manter sombra leve */
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço entre as colunas */
+    align-items: flex-start; /* Alinha as colunas no topo */
+}
+
+.coluna {
+    flex: 1; /* Todas as colunas terão o mesmo tamanho */
+    padding: 10px; /* Espaço interno para cada coluna */
+}
+
+
+#imagem {
+
+    width: 100%;
+    max-width: 200px; /* Define o tamanho máximo da imagem */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem dentro da coluna */
+    border: #aab8db solid 6px;
+    border-radius: 100%; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.301);
+    animation: bounce 2s infinite;
+}
+
+#seg-imagem {
+    width: 100%;
+    max-width: 200px; /* Define o tamanho máximo da imagem */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem dentro da coluna */
+    margin-top: 15px;
+    border: #aab8db solid 6px;
+    border-radius: 15%; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.301);
+    position: relative; /* Necessário para a pseudo-classe funcionar */
+    transition: border 0.3s ease; /* Transição para a borda */
+}
+
+#seg-imagem:hover {
+    border: 3px solid #886c94; /* Adiciona uma borda dourada */
+    animation: pulse-border 1s infinite; /* Inicia a animação pulsante */
+}
+
+@keyframes pulse-border {
+    0% {
+        box-shadow: 0 0 5px 3px rgba(136, 108, 148, 0.5); /* Começa pequeno */
+    }
+    50% {
+        box-shadow: 0 0 15px 8px rgba(136, 108, 148, 0.7); /* Aumenta no meio */
+    }
+    100% {
+        box-shadow: 0 0 5px 3px rgba(136, 108, 148, 0.5); /* Retorna ao original */
+    }
+}
+
+.texto-imagem {
+    font-size: 40px;
+    margin-top: 10px;
+    
+}
+
+.color1 {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+    color:#aab8db;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.795);
+
+}
+
+.color2 {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+    color:#555;
+    text-shadow: 1px 1px 2px rgba(26, 26, 26, 0.11);
+}
+
+.caixa-texto {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+
+    
+}
+
+.texto-meio {
+    padding-top: 10px;
+    font-size: 20px;
+    color:#aab8db;
+    text-shadow: 3px 1px 3px rgba(255, 255, 255, 0.795);
+
+}
+
+h3 {
+    font-size: 20px;
+    color:#aab8db;
+    text-shadow: 3px 1px 3px rgba(255, 255, 255, 0.795);
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #b08dbe;
+    text-shadow: 3px 1px 3px rgba(255, 255, 255, 0.795);
+
+}
+
+.dislikes {
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+    text-shadow: 3px 1px 3px rgba(26, 26, 26, 0.11);
+
+}
+
+iframe {
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .linha {
+        flex-direction: column; /* Muda para layout de coluna em telas menores */
+        align-items: center; /* Centraliza os itens verticalmente */
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+  
+    60% {
+      transform: translateY(-5px);
+      
+    }
+}    
+
+footer {
+    padding: 24px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+#social-links {
+    margin-top: 40px; /* Controla o espaço acima dos ícones */
+    align-items: center; /* Ou 'center' se quiser centralizar */
+    justify-content: center;
+    display: flex;
+    gap: 15px; /* Espaço entre os ícones */
+}
+
+#social-links a {
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+
+#social-links a:hover {
+    color: #886c94; /* Cor de destaque ao passar o mouse */
+}
+
+.container {
+    width: 90%; /* Largura do contêiner */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
